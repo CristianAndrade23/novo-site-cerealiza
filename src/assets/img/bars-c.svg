@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="bars-c" transform="translate(-362 -1360)">
+    <g id="Elipse_10" data-name="Elipse 10" transform="translate(362 1360)" fill="none" stroke="#fff" stroke-width="2">
+      <circle cx="25" cy="25" r="25" stroke="none"/>
+      <circle cx="25" cy="25" r="24" fill="none"/>
+    </g>
+    <g id="_005-bar-chart" data-name="005-bar-chart" transform="translate(377 1344.799)">
+      <g id="Grupo_6" data-name="Grupo 6" transform="translate(0 47.818)">
+        <g id="Grupo_5" data-name="Grupo 5">
+          <path id="Caminho_31" data-name="Caminho 31" d="M19.528,456.607H.472a.473.473,0,0,0,0,.945H19.528a.473.473,0,0,0,0-.945Z" transform="translate(0 -456.607)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Grupo_8" data-name="Grupo 8" transform="translate(1.232 31.201)">
+        <g id="Grupo_7" data-name="Grupo 7">
+          <path id="Caminho_32" data-name="Caminho 32" d="M48.594,33.432H45.276a.473.473,0,0,0-.472.472v3.213H42.43V31.674a.473.473,0,0,0-.473-.473H38.639a.473.473,0,0,0-.472.473v8.941H35.793V36.6a.473.473,0,0,0-.472-.472H32a.472.472,0,0,0-.472.472v9.045a.473.473,0,0,0,.472.473H48.594a.473.473,0,0,0,.472-.473V33.9A.472.472,0,0,0,48.594,33.432ZM34.848,45.171H32.475v-8.1h2.373Zm3.318,0H35.793V41.559h2.373Zm3.318-7.582v7.582H39.112V32.146h2.373ZM44.8,45.171H42.43V38.062H44.8Zm3.318,0H45.748V34.377h2.373V45.171Z" transform="translate(-31.53 -31.201)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
