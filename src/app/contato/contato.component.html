@@ -1,0 +1,77 @@
+<footer>
+  <div id="contato" class="container py-3">
+    <div class="row text-center py-3">
+      <div class="col" style="border-bottom: 1px solid #74E2A3">
+        <h2>Cadastre-se e faça o teste por 15 dias.</h2>
+        <p><button class="bt gradient-gb my-2" data-toggle="modal" data-target="#cadastroModal">Testar agora</button></p>
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class="col-md-4 col-12 text-center align-self-center" style="font-size: 12px">
+        <img src="assets/img/simbolo.svg" alt="" class="img-fluid mr-2"> © Cerealiza 2019 - Todos os direitos reservados
+      </div>
+      <div class="col-md-4 col-12 align-self-center">
+        <div class="row my-2 text-center">
+          <div class="col">
+            <img src="assets/img/box-envelope.svg" alt=""> <a href="mailto:sac@cerealiza.com.br">sac@cerealiza.com.br</a>
+          </div>
+        </div>
+        <div class="row my-2 text-center">
+          <div class="col">
+            <img src="assets/img/box-facebook.svg" alt=""> facebook.com/cerealiza
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-12 text-center align-self-center my-2">
+        <!-- <img src="img/whats.png" alt="" class="img-fluid"> -->
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cadastroModalLabel">Preencha os campos que enviaremos o acesso para seu e-mail</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="nome" class="col-form-label">Nome</label>
+            <input type="text" class="form-control" id="nome">
+          </div>
+          <div class="form-group">
+            <label for="sobrenome" class="col-form-label">Sobrenome</label>
+            <input type="text" class="form-control" id="sobrenome">
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-form-label">E-mail</label>
+            <input type="text" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="cpf" class="col-form-label">CPF</label>
+            <input type="text" class="form-control" id="cpf">
+          </div>
+          <div class="form-group">
+            <label for="area-plantada" class="col-form-label">Área plantada</label>
+            <select class="custom-select" id="area">
+              <option selected>Selecione...</option>
+              <option value="1">Entre 1 e 500 hectares</option>
+              <option value="2">Entre 501 e 1.000 hectares</option>
+              <option value="3">Entre 1.001 e 2.000 hectares</option>
+              <option value="4">Entre 2.001 e 5.000 hectares</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>

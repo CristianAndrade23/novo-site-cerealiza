@@ -1,0 +1,77 @@
+<section id="beneficios">
+  <div class="container my-5">
+
+    <div class="row">
+      <div class="col-12 bhoechie-tab-container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 bhoechie-tab-menu">
+            <div class="list-group">
+              <a (click)="mostra('simplificar')" [class.active]="simplificar" class="list-group-item" style="cursor: pointer">
+                <img src="assets/img/like-c.svg" alt="" class="mr-2">
+                Simplificar a coleta de dados
+              </a>
+              <a (click)="mostra('analisar')" [class.active]="analisar" class="list-group-item" style="cursor: pointer">
+                <img src="assets/img/clock-c.svg" alt="" class="mr-2">
+                Analisar margem/custos
+              </a>
+              <a (click)="mostra('planejar')" [class.active]="planejar" class="list-group-item" style="cursor: pointer">
+                <img src="assets/img/star-c.svg" alt="" class="mr-2">
+                Planejar construção de margem
+              </a>
+              <a (click)="mostra('orientar')" [class.active]="orientar" class="list-group-item" style="cursor: pointer">
+                <img src="assets/img/bars-c.svg" alt="" class="mr-2">
+                Orientar para a venda
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 bhoechie-tab text-center p-5 d-flex align-items-center">
+            <!-- flight section -->
+            <div *ngIf="simplificar" id="rotinas" class="bhoechie-tab-content active">
+              <img src="assets/img/like-c.svg" alt="" class="mb-4">
+              <p>Rotinas simples que evitam ao MÁXIMO a busca nota a nota pelo produtor!</p>
+            </div>
+            <!-- train section -->
+            <div *ngIf="analisar" id="suaMargem" class="bhoechie-tab-content active">
+              <img src="assets/img/clock-c.svg" alt="" class="mb-4">
+              <p>Sua margem está boa? Vendeu bem? Seus custos estão competitivos na região?</p>
+            </div>
+
+            <!-- hotel search -->
+            <div *ngIf="planejar" class="bhoechie-tab-content active">
+              <img src="assets/img/star-c.svg" alt="" class="mb-4">
+              <p>Como estão as finanças? Dívidas de curto prazo? E os juros? Há como melhorar?</p>
+            </div>
+            <div *ngIf="orientar" class="bhoechie-tab-content active">
+              <img src="assets/img/bars-c.svg" alt="" class="mb-4">
+              <p>Preço médio está compatível com o da região? Analisa o mercado?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row beneficios-mobile py-4 text-center">
+      <div class="col-6 my-4">
+        <p><img src="assets/img/like-c.svg" alt=""></p>
+        <p class="font-weight-bold">Simplificar a coleta de dados</p>
+        <p>Rotinas simples que evitam ao MÁXIMO a busca nota a nota pelo produtor!</p>
+      </div>
+      <div class="col-6 my-4">
+        <p><img src="assets/img/clock-c.svg" alt=""></p>
+        <p class="font-weight-bold">Analisar margem/custos</p>
+        <p>Sua margem está boa? Vendeu bem? Seus custos estão competitivos na região?</p>
+      </div>
+      <div class="col-6 my-4">
+        <p><img src="assets/img/star-c.svg" alt=""></p>
+        <p class="font-weight-bold">Planejar construção de margem</p>
+        <p>Como estão as finanças? Dívidas de curto prazo? E os juros? Há como melhorar?</p>
+      </div>
+      <div class="col-6 my-4">
+        <p><img src="assets/img/bars-c.svg" alt=""></p>
+        <p class="font-weight-bold">Orientar para a venda</p>
+        <p>Preço médio está compatível com o da região? Analisa o mercado?</p>
+      </div>
+    </div>
+
+  </div>
+</section>

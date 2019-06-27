@@ -1,0 +1,66 @@
+<section id="comece">
+  <div class="container my-5">
+    <div class="row align-items-center text-center">
+
+      <div class="col-md-6 col-sm-12 py-2">
+        <img src="assets/img/notebook.png" alt="" class="img-fluid anime anime-start">
+      </div>
+      <div class="col-md-6 col-sm-12 py-2">
+        <img src="assets/img/screen.svg" alt="" class="my-2">
+        <br>
+        <h1 class="my-2">Comece a usar agora gratuitamente!</h1>
+        <p class="my-2">Cadastre-se e faça o teste por 15 dias.</p>
+        <button class="bt gradient-gb my-2" data-toggle="modal" data-target="#cadastroModal">Testar agora</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cadastroModalLabel">Preencha os campos que enviaremos o acesso para seu e-mail</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="nome" class="col-form-label">Nome</label>
+            <input type="text" class="form-control" id="nome">
+          </div>
+          <div class="form-group">
+            <label for="sobrenome" class="col-form-label">Sobrenome</label>
+            <input type="text" class="form-control" id="sobrenome">
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-form-label">E-mail</label>
+            <input type="text" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="cpf" class="col-form-label">CPF</label>
+            <input type="text" class="form-control" id="cpf">
+          </div>
+          <div class="form-group">
+            <label for="area-plantada" class="col-form-label">Área plantada</label>
+            <select class="custom-select" id="area">
+              <option selected>Selecione...</option>
+              <option value="1">Entre 1 e 500 hectares</option>
+              <option value="2">Entre 501 e 1.000 hectares</option>
+              <option value="3">Entre 1.001 e 2.000 hectares</option>
+              <option value="4">Entre 2.001 e 5.000 hectares</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

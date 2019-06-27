@@ -1,1 +1,299 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 66px;
+}
+
+h1{
+  font-family: 'Bree Serif', serif;
+  font-size: 32px;
+}
+
+h2{
+  font-size: 22px;
+  color: #6CC994;
+}
+
+.navbar{
+  /*font-weight: 500;*/
+  font-size: 14px;
+  font-weight: 700;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 10px rgba(0,0,0,0.2);
+}
+
+.navbar li.active{
+  /*border-bottom: 2px solid #007AFF;*/
+  font-weight: 700;
+}
+
+.blue{
+  background: #007AFF;
+  color: #fff;
+}
+
+a.blue:hover{
+  background: #1771d3;
+}
+
+.green{
+  background: #6CC994;
+  color: #fff;
+}
+
+a.green:hover{
+  background: #53a074;
+}
+
+.gradient-yg{
+  background: linear-gradient(#EDE65D 0%, #74E2A3 100%);
+}
+
+.gradient-gb{
+  background: linear-gradient(#007AFF 0%, #5b7ae2 100%);
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 5px rgba(31, 74, 121, 0.3);
+}
+
+.btt{
+  border-radius: 15px;
+  color: #fff !important;
+  margin: .1rem .3rem;
+  padding: .3rem 1rem !important;
+}
+
+.bt{
+  border: 0;
+  padding: .5rem .7rem;
+  border-radius: 20px;
+  cursor:pointer;
+}
+
+.anime{
+  opacity: 0;
+  transform: translate3d(0,100px,0);
+  transition: .5s;
+}
+
+.anime-start{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+#banner{
+  color: #fff;
+  background: url(src/assets/img/banner.jpg) center;
+  background-size: cover;
+  padding: 160px 0;
+}
+
+#banner h1{
+  font-size: 40px;
+}
+
+#beneficios{
+  background: #6CC994;
+  color: #fff;
+}
+
+#beneficios a{
+  color: #fff;
+}
+
+#beneficios .list-group-item{
+  background: #6CC994;
+  border: 0;
+  border-bottom: 1px solid #5bad7e;
+  padding: 25px 0;
+  font-size: 22px;
+  color: #3b6c50;
+  transition: color 0.3s , border 0.8s;
+}
+
+#beneficios .list-group-item:hover{
+  border-bottom: 1px solid #fff;
+}
+
+#beneficios .list-group{
+  background: #6CC994;
+  padding: 0 15px;
+}
+
+#depoimentos{
+  background: #f9f9f9;
+}
+
+.content-video{
+  background: #fff;
+  margin-bottom: 15px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 10px rgba(0,0,0,0.2);
+}
+
+.content-video video{
+  border-bottom: 5px solid #74E2A3;
+}
+
+.content-video div{
+  padding: 10px;
+  margin-top: -5px;
+}
+
+.content-video .nome-cliente{
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.content-video .area{
+  margin: 0 0 5px 0;
+}
+
+.content-video .resumo{
+  font-style: italic;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+#equipe{
+  background: url(src/assets/img/simbolo.png) no-repeat center #6CC994;
+  color: #fff;
+}
+
+#equipe .foto img{
+  border-radius: 100%;
+  border: 2px solid #fff;
+  margin-bottom: 15px;
+}
+
+#equipe .profissional{
+  margin-bottom: 15px;
+}
+
+.profissional p:first-child  {
+  font-size: 22px;
+}
+
+
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 !important;
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  background: #6CC994;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #fff;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  background-color: #6CC994;
+  background-image: #6CC994;
+  color: #ffffff;
+  border: 0;
+}
+
+#beneficios .list-group-item.active{
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: calc(100% + 15px);
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #6CC994;
+}
+
+div.bhoechie-tab-content{
+  padding-top: 10px;
+}
+
+div.bhoechie-tab-content.active img{
+  width: 20%;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+
+.bhoechie-tab{
+  background: #52946E;
+}
+
+.bhoechie-tab-content p{
+  font-size: 22px;
+}
+
+.beneficios-mobile{
+  display: none;
+}
+
+footer{
+  background: #333333;
+  color: #fff;
+}
+
+footer h2{
+  color:  #fff;
+}
+
+footer a{
+  color: #fff;
+}
+
+footer a:hover{
+  color: #fff;
+}
+
+
+/* RESPONSIVO */
+
+@media screen and (max-width: 991px) {
+  .btt{
+    margin: .5rem 0;
+  }
+  #banner{
+    background-size: cover;
+  }
+  .bhoechie-tab-container{
+    display: none;
+  }
+  .beneficios-mobile{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 575.98px ){
+
+}
