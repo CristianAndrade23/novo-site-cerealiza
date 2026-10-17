@@ -1,0 +1,133 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  height: var(--header-h);
+  color: #fff;
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s,
+    color 0.2s;
+}
+
+.header--solid {
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 var(--border);
+  color: var(--text);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 100%;
+}
+
+.header__toggle {
+  display: none;
+}
+
+.nav,
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav {
+  gap: 24px;
+}
+
+.nav__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  padding: 8px 12px;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  opacity: 1;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  inset: auto 12px 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.nav__link--active::after {
+  transform: scaleX(1);
+}
+
+.nav__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.header:not(.header--solid) .btn--ghost {
+  border-color: rgb(255 255 255 / 0.5);
+  color: #fff;
+}
+
+@media (max-width: 960px) {
+  .header__toggle {
+    display: inline-grid;
+  }
+
+  .nav {
+    position: absolute;
+    inset: var(--header-h) 0 auto;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 8px 16px 24px;
+    background: var(--bg);
+    box-shadow: 0 12px 24px rgb(0 0 0 / 0.12);
+  }
+
+  .nav--open {
+    display: flex;
+  }
+
+  .nav__links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav__link {
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav__link::after {
+    display: none;
+  }
+
+  .nav__link--active {
+    color: var(--primary);
+  }
+
+  .nav__actions .btn {
+    flex: 1;
+    min-height: 44px;
+  }
+}
