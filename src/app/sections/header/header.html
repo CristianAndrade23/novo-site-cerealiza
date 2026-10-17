@@ -1,0 +1,45 @@
+<header class="header" [class.header--solid]="scrolled() || menuOpen()">
+  <div class="header__inner container">
+    <a href="#inicio" class="brand" aria-label="AgroPainel, voltar ao início">
+      <span class="brand__mark"><app-icon name="sprout" [size]="20" /></span>
+      AgroPainel
+    </a>
+
+    <button
+      type="button"
+      class="btn-icon header__toggle"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="menu-principal"
+      [attr.aria-label]="menuOpen() ? 'Fechar menu' : 'Abrir menu'"
+      (click)="menuOpen.set(!menuOpen())"
+    >
+      <app-icon [name]="menuOpen() ? 'x' : 'menu'" [size]="22" />
+    </button>
+
+    <nav id="menu-principal" class="nav" [class.nav--open]="menuOpen()" aria-label="Principal">
+      <ul class="nav__links">
+        @for (item of items; track item.id) {
+          <li>
+            <a
+              class="nav__link"
+              [href]="'#' + item.id"
+              [class.nav__link--active]="activeSection() === item.id"
+              [attr.aria-current]="activeSection() === item.id ? 'location' : null"
+              (click)="menuOpen.set(false)"
+              >{{ item.label }}</a
+            >
+          </li>
+        }
+      </ul>
+      <div class="nav__actions">
+        <button type="button" class="btn btn--primary btn--sm" (click)="openSignup()">
+          Teste grátis
+        </button>
+        <a class="btn btn--ghost btn--sm" [href]="panelUrl" target="_blank" rel="noopener">
+          <app-icon name="user" [size]="16" />
+          Entrar
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>

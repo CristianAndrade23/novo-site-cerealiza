@@ -1,0 +1,94 @@
+@if (sentTo(); as address) {
+  <div class="success" role="status">
+    <span class="success__icon"><app-icon name="check-circle" [size]="40" /></span>
+    <h3>Cadastro recebido!</h3>
+    <p>
+      Enviamos o acesso para <strong>{{ address }}</strong
+      >. Aproveite os 15 dias de teste.
+    </p>
+    <p class="success__note">Demonstração: nenhum dado foi enviado de verdade.</p>
+    <button type="button" class="btn btn--primary" (click)="dialog.close()">Fechar</button>
+  </div>
+} @else {
+  <form class="form-grid" novalidate (submit)="send($event)">
+    @let firstNameError = errorOf(signupForm.firstName);
+    <label class="field">
+      <span class="field__label">Nome</span>
+      <input
+        class="input"
+        autocomplete="given-name"
+        [formField]="signupForm.firstName"
+        [attr.aria-invalid]="!!firstNameError"
+      />
+      @if (firstNameError) {
+        <span class="field__error">{{ firstNameError }}</span>
+      }
+    </label>
+
+    @let lastNameError = errorOf(signupForm.lastName);
+    <label class="field">
+      <span class="field__label">Sobrenome</span>
+      <input
+        class="input"
+        autocomplete="family-name"
+        [formField]="signupForm.lastName"
+        [attr.aria-invalid]="!!lastNameError"
+      />
+      @if (lastNameError) {
+        <span class="field__error">{{ lastNameError }}</span>
+      }
+    </label>
+
+    @let emailError = errorOf(signupForm.email);
+    <label class="field field--full">
+      <span class="field__label">E-mail</span>
+      <input
+        class="input"
+        type="email"
+        autocomplete="email"
+        [formField]="signupForm.email"
+        [attr.aria-invalid]="!!emailError"
+      />
+      @if (emailError) {
+        <span class="field__error">{{ emailError }}</span>
+      }
+    </label>
+
+    @let cpfError = errorOf(signupForm.cpf);
+    <label class="field">
+      <span class="field__label">CPF</span>
+      <input
+        class="input"
+        inputmode="numeric"
+        placeholder="000.000.000-00"
+        [formField]="signupForm.cpf"
+        [attr.aria-invalid]="!!cpfError"
+        (input)="maskCpf($event)"
+      />
+      @if (cpfError) {
+        <span class="field__error">{{ cpfError }}</span>
+      }
+    </label>
+
+    @let areaError = errorOf(signupForm.area);
+    <label class="field">
+      <span class="field__label">Área plantada</span>
+      <select class="input" [formField]="signupForm.area" [attr.aria-invalid]="!!areaError">
+        <option value="" disabled>Selecione…</option>
+        @for (area of areas; track area.value) {
+          <option [value]="area.value">{{ area.label }}</option>
+        }
+      </select>
+      @if (areaError) {
+        <span class="field__error">{{ areaError }}</span>
+      }
+    </label>
+
+    <div class="actions field--full">
+      <button type="button" class="btn btn--ghost" (click)="dialog.close()">Cancelar</button>
+      <button type="submit" class="btn btn--primary" [disabled]="signupForm().submitting()">
+        {{ signupForm().submitting() ? 'Enviando…' : 'Enviar' }}
+      </button>
+    </div>
+  </form>
+}

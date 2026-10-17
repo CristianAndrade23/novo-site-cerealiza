@@ -1,0 +1,52 @@
+<section id="beneficios" class="section benefits">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Benefícios</span>
+      <h2 class="title">O que muda na gestão da sua lavoura</h2>
+    </div>
+
+    <div class="tabs" appReveal>
+      <div class="tabs__list" role="tablist" aria-label="Benefícios" aria-orientation="vertical">
+        @for (benefit of benefits; track benefit.id; let i = $index) {
+          <button
+            #tab
+            type="button"
+            role="tab"
+            class="tab"
+            [id]="'tab-' + benefit.id"
+            [attr.aria-selected]="benefit.id === selectedId()"
+            [attr.aria-controls]="'painel-' + benefit.id"
+            [tabIndex]="benefit.id === selectedId() ? 0 : -1"
+            (click)="select(benefit.id)"
+            (keydown)="onKeydown($event, i)"
+          >
+            <span class="tab__icon"><app-icon [name]="benefit.icon" [size]="22" /></span>
+            {{ benefit.title }}
+          </button>
+        }
+      </div>
+
+      @let current = selected();
+      <div
+        class="panel"
+        role="tabpanel"
+        tabindex="0"
+        [id]="'painel-' + current.id"
+        [attr.aria-labelledby]="'tab-' + current.id"
+      >
+        <!-- @for de um item só: recria o conteúdo ao trocar de aba e reinicia a animação. -->
+        @for (benefit of [current]; track benefit.id) {
+          <div class="panel__content">
+            <span class="panel__icon"><app-icon [name]="benefit.icon" [size]="36" /></span>
+            <p class="panel__question">{{ benefit.question }}</p>
+            <ul class="panel__points">
+              @for (point of benefit.points; track point) {
+                <li><app-icon name="check" [size]="18" /> {{ point }}</li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
