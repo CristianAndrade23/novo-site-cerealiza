@@ -4,6 +4,8 @@ Landing page de um sistema de gestão financeira de lavouras: apresentação do 
 
 ![Hero](docs/screenshots/hero.png)
 
+**[Ver o site publicado](https://cristianandrade23.github.io/novo-site-cerealiza/)**
+
 > Projeto de portfólio. Nasceu em 2019 como o site institucional de um produto real (Angular 6) e foi **reescrito em Angular 22** com componentes standalone, signals, Signal Forms e change detection zoneless. A marca, as pessoas e os depoimentos originais foram removidos, e todo o conteúdo é fictício. É o site do mesmo produto do [AgroPainel](https://github.com/CristianAndrade23/agro-painel), o painel administrativo.
 
 ## Seções

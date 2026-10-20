@@ -7,7 +7,7 @@ import { Icon } from '../../shared/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [Icon],
   template: `
-    <section id="inicio" class="hero">
+    <section id="inicio" class="hero" style="--hero-image: url('img/banner.webp')">
       <div class="container hero__content">
         <span class="eyebrow">Gestão financeira de lavouras</span>
         <h1 class="hero__title">
@@ -40,7 +40,7 @@ import { Icon } from '../../shared/icon';
       padding: calc(var(--header-h) + 48px) 0 96px;
       background:
         linear-gradient(100deg, rgb(10 20 12 / 0.88) 10%, rgb(10 20 12 / 0.45) 70%),
-        url('/img/banner.webp') center / cover no-repeat,
+        var(--hero-image) center / cover no-repeat,
         var(--deep);
       color: #fff;
     }
